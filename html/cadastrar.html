@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achei! | Cadastrar objeto</title>
+    <title>Achei! | Registrar objeto</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="wrap topo__linha">
             <a class="marca" href="index.html">🔎 Achei!</a>
 
-            <nav aria-label="Menu principal">
+            <nav>
                 <ul class="menu">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="objetos.html">Objetos</a></li>
@@ -27,35 +27,40 @@
     <main>
         <section class="bloco bloco--cinza">
             <div class="wrap estreito">
-                <h2>Cadastrar objeto</h2>
+
+                <h2>Registrar um objeto</h2>
 
                 <p class="intro">
-                    Perdeu ou encontrou algo? Preencha os dados.
-                    Quanto mais detalhes, maiores as chances de devolução.
+                    Perdeu ou encontrou alguma coisa?
+                    Preencha o formulário para registrar o objeto.
                 </p>
 
-                <form class="formulario" action="#" method="post" enctype="multipart/form-data">
+                <form class="formulario" action="confirmacao.html" method="get">
 
                     <fieldset class="grupo">
-                        <legend>O que aconteceu?</legend>
+                        <legend>Tipo de registro</legend>
 
                         <div class="opcoes">
                             <label class="opcao">
-                                <input type="radio" name="situacao" value="perdido" required>
-                                Perdi um objeto
+                                <input type="radio" name="tipo"
+                                    value="Perdido" required>
+                                Objeto perdido
                             </label>
 
                             <label class="opcao">
-                                <input type="radio" name="situacao" value="encontrado">
-                                Encontrei um objeto
+                                <input type="radio" name="tipo"
+                                    value="Encontrado">
+                                Objeto encontrado
                             </label>
                         </div>
                     </fieldset>
 
                     <div class="campo">
-                        <label for="objeto">Nome do objeto</label>
-                        <input type="text" id="objeto" name="objeto"
-                            placeholder="Ex.: Mochila preta com chaveiro" required>
+                        <label for="nomeObjeto">Nome do objeto</label>
+                        <input type="text" id="nomeObjeto"
+                            name="objeto"
+                            placeholder="Ex.: Mochila preta"
+                            required>
                     </div>
 
                     <div class="dupla">
@@ -64,66 +69,61 @@
 
                             <select id="categoria" name="categoria" required>
                                 <option value="">Selecione</option>
-                                <option>Eletrônicos</option>
-                                <option>Documentos</option>
-                                <option>Vestuário</option>
-                                <option>Material escolar</option>
-                                <option>Outros</option>
+                                <option value="Eletrônicos">Eletrônicos</option>
+                                <option value="Documentos">Documentos</option>
+                                <option value="Vestuário">Vestuário</option>
+                                <option value="Material escolar">Material escolar</option>
+                                <option value="Outros">Outros</option>
                             </select>
                         </div>
 
                         <div class="campo">
                             <label for="data">Data</label>
-                            <input type="date" id="data" name="data" required>
+                            <input type="date" id="data"
+                                name="data" required>
                         </div>
                     </div>
 
                     <div class="campo">
                         <label for="local">Local</label>
                         <input type="text" id="local" name="local"
-                            placeholder="Ex.: Biblioteca, 2º andar" required>
+                            placeholder="Ex.: Biblioteca, bloco A"
+                            required>
                     </div>
 
                     <div class="campo">
-                        <label for="descricao">Descrição</label>
-                        <textarea id="descricao" name="descricao" rows="4"
-                            placeholder="Cor, marca, características marcantes..."
+                        <label for="descricao">Descrição do objeto</label>
+                        <textarea id="descricao" name="descricao"
+                            rows="5"
+                            placeholder="Descreva as características do objeto..."
                             required></textarea>
                     </div>
 
                     <div class="campo">
-                        <label for="foto">Foto (opcional)</label>
-                        <input type="file" id="foto" name="foto" accept="image/*">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome"
+                            placeholder="Digite seu nome"
+                            required>
                     </div>
 
-                    <fieldset class="grupo">
-                        <legend>Como entrar em contato com você?</legend>
-
-                        <div class="dupla">
-                            <div class="campo">
-                                <label for="nome">Seu nome</label>
-                                <input type="text" id="nome" name="nome" required>
-                            </div>
-
-                            <div class="campo">
-                                <label for="email">E-mail institucional</label>
-                                <input type="email" id="email" name="email"
-                                    placeholder="voce@instituicao.edu.br" required>
-                            </div>
-                        </div>
-                    </fieldset>
+                    <div class="campo">
+                        <label for="email">E-mail para contato</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="seuemail@exemplo.com"
+                            required>
+                    </div>
 
                     <label class="consentimento">
-                        <input type="checkbox" name="consentimento" required>
-                        Concordo em compartilhar meu contato apenas com quem
-                        reivindicar este objeto.
+                        <input type="checkbox" required>
+                        Confirmo que as informações fornecidas são verdadeiras.
                     </label>
 
-                    <button class="btn btn--cheio" type="submit">
+                    <button type="submit" class="btn btn--cheio">
                         Registrar objeto
                     </button>
 
                 </form>
+
             </div>
         </section>
     </main>
