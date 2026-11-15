@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achei! | Cadastrar objeto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="wrap topo__linha">
+            <a class="marca" href="index.html">🔎 Achei!</a>
+
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="objetos.html">Objetos</a></li>
+                    <li><a href="cadastrar.html">Cadastrar</a></li>
+                    <li><a href="como-funciona.html">Como funciona</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bloco bloco--cinza">
+            <div class="wrap estreito">
+                <h2>Cadastrar objeto</h2>
+
+                <p class="intro">
+                    Perdeu ou encontrou algo? Preencha os dados.
+                    Quanto mais detalhes, maiores as chances de devolução.
+                </p>
+
+                <form class="formulario" action="#" method="post" enctype="multipart/form-data">
+
+                    <fieldset class="grupo">
+                        <legend>O que aconteceu?</legend>
+
+                        <div class="opcoes">
+                            <label class="opcao">
+                                <input type="radio" name="situacao" value="perdido" required>
+                                Perdi um objeto
+                            </label>
+
+                            <label class="opcao">
+                                <input type="radio" name="situacao" value="encontrado">
+                                Encontrei um objeto
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="objeto">Nome do objeto</label>
+                        <input type="text" id="objeto" name="objeto"
+                            placeholder="Ex.: Mochila preta com chaveiro" required>
+                    </div>
+
+                    <div class="dupla">
+                        <div class="campo">
+                            <label for="categoria">Categoria</label>
+
+                            <select id="categoria" name="categoria" required>
+                                <option value="">Selecione</option>
+                                <option>Eletrônicos</option>
+                                <option>Documentos</option>
+                                <option>Vestuário</option>
+                                <option>Material escolar</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="data">Data</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="local">Local</label>
+                        <input type="text" id="local" name="local"
+                            placeholder="Ex.: Biblioteca, 2º andar" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" name="descricao" rows="4"
+                            placeholder="Cor, marca, características marcantes..."
+                            required></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <label for="foto">Foto (opcional)</label>
+                        <input type="file" id="foto" name="foto" accept="image/*">
+                    </div>
+
+                    <fieldset class="grupo">
+                        <legend>Como entrar em contato com você?</legend>
+
+                        <div class="dupla">
+                            <div class="campo">
+                                <label for="nome">Seu nome</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="email">E-mail institucional</label>
+                                <input type="email" id="email" name="email"
+                                    placeholder="voce@instituicao.edu.br" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <label class="consentimento">
+                        <input type="checkbox" name="consentimento" required>
+                        Concordo em compartilhar meu contato apenas com quem
+                        reivindicar este objeto.
+                    </label>
+
+                    <button class="btn btn--cheio" type="submit">
+                        Registrar objeto
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="wrap">
+            <p><strong>🔎 Achei!</strong> • Facilitando o reencontro com o que é seu.</p>
+            <p class="pequeno">Projeto acadêmico demonstrativo em HTML e CSS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

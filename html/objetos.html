@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achei! | Objetos registrados</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="wrap topo__linha">
+            <a class="marca" href="index.html">🔎 Achei!</a>
+
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="objetos.html">Objetos</a></li>
+                    <li><a href="cadastrar.html">Cadastrar</a></li>
+                    <li><a href="como-funciona.html">Como funciona</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bloco">
+            <div class="wrap">
+                <h2>Objetos registrados</h2>
+                <p class="intro">
+                    Confira os objetos perdidos e encontrados na instituição.
+                </p>
+
+                <div class="painel">
+
+                    <fieldset class="filtro">
+                        <legend>Tipo</legend>
+                        <input type="radio" name="tipo" id="t-todos" checked>
+                        <label for="t-todos">Todos</label>
+
+                        <input type="radio" name="tipo" id="t-perdido">
+                        <label for="t-perdido">Perdidos</label>
+
+                        <input type="radio" name="tipo" id="t-encontrado">
+                        <label for="t-encontrado">Encontrados</label>
+                    </fieldset>
+
+                    <fieldset class="filtro">
+                        <legend>Categoria</legend>
+                        <input type="radio" name="cat" id="c-todas" checked>
+                        <label for="c-todas">Todas</label>
+
+                        <input type="radio" name="cat" id="c-eletronicos">
+                        <label for="c-eletronicos">Eletrônicos</label>
+
+                        <input type="radio" name="cat" id="c-documentos">
+                        <label for="c-documentos">Documentos</label>
+
+                        <input type="radio" name="cat" id="c-vestuario">
+                        <label for="c-vestuario">Vestuário</label>
+
+                        <input type="radio" name="cat" id="c-material">
+                        <label for="c-material">Material escolar</label>
+
+                        <input type="radio" name="cat" id="c-outros">
+                        <label for="c-outros">Outros</label>
+                    </fieldset>
+
+                    <fieldset class="filtro">
+                        <legend>Status</legend>
+                        <input type="radio" name="st" id="s-todos" checked>
+                        <label for="s-todos">Todos</label>
+
+                        <input type="radio" name="st" id="s-aberto">
+                        <label for="s-aberto">Em aberto</label>
+
+                        <input type="radio" name="st" id="s-resolvido">
+                        <label for="s-resolvido">Resolvidos</label>
+                    </fieldset>
+
+                    <div class="grade">
+
+                        <article class="item" data-tipo="perdido" data-cat="eletronicos">
+                            <div class="item__topo">
+                                <span class="tag tag--perdido">Perdido</span>
+                                <time datetime="2026-11-12">12/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🎧</div>
+                            <h3>Fone de ouvido preto</h3>
+                            <p>Fone over-ear preto com estojo cinza. Perdido após a aula de Cálculo.</p>
+                            <ul class="meta">
+                                <li>📍 Bloco B, sala 204</li>
+                                <li>🏷️ Eletrônicos</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Fone%20de%20ouvido">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r1">
+                            <label class="resolver" for="r1">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="encontrado" data-cat="documentos">
+                            <div class="item__topo">
+                                <span class="tag tag--encontrado">Encontrado</span>
+                                <time datetime="2026-11-13">13/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🪪</div>
+                            <h3>Carteirinha estudantil</h3>
+                            <p>Carteirinha encontrada no corredor. O nome não é exibido por segurança.</p>
+                            <ul class="meta">
+                                <li>📍 Corredor do Bloco A</li>
+                                <li>🏷️ Documentos</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Carteirinha">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r2">
+                            <label class="resolver" for="r2">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="perdido" data-cat="vestuario">
+                            <div class="item__topo">
+                                <span class="tag tag--perdido">Perdido</span>
+                                <time datetime="2026-11-10">10/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🧥</div>
+                            <h3>Casaco azul-marinho</h3>
+                            <p>Casaco com capuz, tamanho M, com pequeno bordado na manga esquerda.</p>
+                            <ul class="meta">
+                                <li>📍 Auditório</li>
+                                <li>🏷️ Vestuário</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Casaco">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r3">
+                            <label class="resolver" for="r3">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="encontrado" data-cat="material">
+                            <div class="item__topo">
+                                <span class="tag tag--encontrado">Encontrado</span>
+                                <time datetime="2026-11-11">11/11/2026</time>
+                            </div>
+                            <div class="item__emoji">📘</div>
+                            <h3>Caderno e estojo</h3>
+                            <p>Caderno universitário azul com estojo vermelho encontrado sobre uma mesa.</p>
+                            <ul class="meta">
+                                <li>📍 Biblioteca, 2º andar</li>
+                                <li>🏷️ Material escolar</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Caderno">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r4">
+                            <label class="resolver" for="r4">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="perdido" data-cat="outros">
+                            <div class="item__topo">
+                                <span class="tag tag--perdido">Perdido</span>
+                                <time datetime="2026-11-09">09/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🔑</div>
+                            <h3>Chaveiro com 3 chaves</h3>
+                            <p>Chaveiro de borracha amarelo com três chaves e pingente de estrela.</p>
+                            <ul class="meta">
+                                <li>📍 Cantina</li>
+                                <li>🏷️ Outros</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Chaveiro">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r5">
+                            <label class="resolver" for="r5">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="encontrado" data-cat="eletronicos">
+                            <div class="item__topo">
+                                <span class="tag tag--encontrado">Encontrado</span>
+                                <time datetime="2026-11-08">08/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🔌</div>
+                            <h3>Carregador de notebook</h3>
+                            <p>Carregador de notebook com cabo enrolado, esquecido em uma tomada.</p>
+                            <ul class="meta">
+                                <li>📍 Laboratório de Informática</li>
+                                <li>🏷️ Eletrônicos</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Carregador">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r6" checked>
+                            <label class="resolver" for="r6">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="perdido" data-cat="material">
+                            <div class="item__topo">
+                                <span class="tag tag--perdido">Perdido</span>
+                                <time datetime="2026-11-05">05/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🧮</div>
+                            <h3>Calculadora científica</h3>
+                            <p>Calculadora científica preta com as iniciais M.L. escritas atrás.</p>
+                            <ul class="meta">
+                                <li>📍 Bloco C, sala 108</li>
+                                <li>🏷️ Material escolar</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Calculadora">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r7" checked>
+                            <label class="resolver" for="r7">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                        <article class="item" data-tipo="encontrado" data-cat="outros">
+                            <div class="item__topo">
+                                <span class="tag tag--encontrado">Encontrado</span>
+                                <time datetime="2026-11-14">14/11/2026</time>
+                            </div>
+                            <div class="item__emoji">🥤</div>
+                            <h3>Garrafa térmica verde</h3>
+                            <p>Garrafa térmica verde com adesivos de livros, encontrada na quadra.</p>
+                            <ul class="meta">
+                                <li>📍 Quadra poliesportiva</li>
+                                <li>🏷️ Outros</li>
+                            </ul>
+                            <span class="selo-status status--aberto">Em aberto</span>
+                            <span class="selo-status status--resolvido">Resolvido</span>
+                            <a class="contato" href="mailto:achei@exemplo.edu.br?subject=Garrafa">✉️ Entrar em contato</a>
+                            <input class="chk" type="checkbox" id="r8">
+                            <label class="resolver" for="r8">
+                                <span class="txt-aberto">✔ Marcar como resolvido</span>
+                                <span class="txt-resolvido">↺ Reabrir</span>
+                            </label>
+                        </article>
+
+                    </div>
+                </div>
+
+                <p class="aviso">
+                    Os registros acima são exemplos fictícios. Esta versão estática
+                    não salva alterações ao recarregar a página.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="wrap">
+            <p><strong>🔎 Achei!</strong> • Facilitando o reencontro com o que é seu.</p>
+            <p class="pequeno">Projeto acadêmico demonstrativo em HTML e CSS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
